@@ -7,6 +7,10 @@ dotenv.config();
 const app: Application = express();
 const port = process.env.PORT || 8000;
 
+app.get('/api/data', (req: Request, res: Response) => res.json({
+  message: "Seems to work!",
+}));
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Express & TypeScript Server');
 });
