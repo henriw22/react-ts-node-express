@@ -1,6 +1,6 @@
-const pg = require("pg");
+import PG from 'pg';
 
-const client = new pg.Client({
+const client = new PG.Client({
   connectionString: process.env.DATABASE_URL || "",
   ssl: {
     rejectUnauthorized: false,
